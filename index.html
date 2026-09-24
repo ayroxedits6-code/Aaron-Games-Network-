@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="GG MODS - Gaming Mods, Games, Movies, Chat and Community"
+  >
+
+  <title>GG MODS</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       MOBILE HEADER
+  ========================== -->
+  <header class="mobile-header">
+    <button
+      id="mobileMenuButton"
+      class="icon-button"
+      type="button"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+    <div class="brand">
+      <div class="brand-logo">GG</div>
+      <div>
+        <h1>GG MODS</h1>
+        <span>Gaming Community</span>
+      </div>
+    </div>
+
+    <button
+      id="mobileProfileButton"
+      class="icon-button"
+      type="button"
+      aria-label="Profile"
+    >
+      👤
+    </button>
+  </header>
+
+
+  <!-- =========================
+       APP LAYOUT
+  ========================== -->
+  <div class="app-layout">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside id="sidebar" class="sidebar">
+
+      <div class="sidebar-brand">
+        <div class="brand-logo large">GG</div>
+
+        <div>
+          <h2>GG MODS</h2>
+          <p>Gaming Community</p>
+        </div>
+      </div>
+
+
+      <!-- Navigation -->
+      <nav class="main-navigation">
+
+        <button
+          class="nav-item active"
+          data-page="home"
+          type="button"
+        >
+          <span>🏠</span>
+          <span>Home</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="games"
+          type="button"
+        >
+          <span>🎮</span>
+          <span>Games</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="movies"
+          type="button"
+        >
+          <span>🎬</span>
+          <span>Movies</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="chat"
+          type="button"
+        >
+          <span>💬</span>
+          <span>Chat</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="members"
+          type="button"
+        >
+          <span>👥</span>
+          <span>Members</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="coins"
+          type="button"
+        >
+          <span>🪙</span>
+          <span>Coins</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="upcoming"
+          type="button"
+        >
+          <span>📅</span>
+          <span>Upcoming Games</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="profile"
+          type="button"
+        >
+          <span>👤</span>
+          <span>Profile</span>
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="settings"
+          type="button"
+        >
+          <span>⚙️</span>
+          <span>Settings</span>
+        </button>
+
+        <!-- Admin only -->
+        <button
+          id="adminNavItem"
+          class="nav-item admin-nav"
+          data-page="admin"
+          type="button"
+          hidden
+        >
+          <span>🛠️</span>
+          <span>Admin Panel</span>
+        </button>
+
+      </nav>
+
+
+      <!-- Sidebar user area -->
+      <div class="sidebar-user">
+
+        <div class="user-avatar" id="sidebarUserAvatar">
+          G
+        </div>
+
+        <div class="sidebar-user-info">
+          <strong id="sidebarUsername">Guest</strong>
+          <span id="sidebarUserStatus">Not logged in</span>
+        </div>
+
+        <button
+          id="logoutButton"
+          class="logout-button"
+          type="button"
+          title="Logout"
+        >
+          ↪
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+      <!-- Top bar -->
+      <header class="topbar">
+
+        <div class="page-heading">
+          <p>WELCOME TO</p>
+          <h1 id="pageTitle">GG MODS</h1>
+        </div>
+
+        <div class="topbar-actions">
+
+          <button
+            id="notificationButton"
+            class="topbar-button"
+            type="button"
+            title="Notifications"
+          >
+            🔔
+            <span
+              id="notificationBadge"
+              class="notification-badge"
+              hidden
+            >
+              0
+            </span>
+          </button>
+
+          <button
+            id="themeButton"
+            class="topbar-button"
+            type="button"
+            title="Change theme"
+          >
+            🎨
+          </button>
+
+          <div class="topbar-user">
+
+            <div
+              id="topbarAvatar"
+              class="user-avatar"
+            >
+              G
+            </div>
+
+            <div>
+              <strong id="topbarUsername">Guest</strong>
+              <span id="topbarCoins">0 Coins</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <!-- =========================
+           PAGE CONTENT
+      ========================== -->
+      <section
+        id="appContent"
+        class="page-content"
+      >
+
+        <!-- JavaScript loads pages here -->
+
+        <div class="loading-screen">
+          <div class="loading-spinner"></div>
+          <p>Loading GG MODS...</p>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================
+       MOBILE NAVIGATION
+  ========================== -->
+  <nav class="mobile-bottom-nav">
+
+    <button
+      class="mobile-nav-item active"
+      data-page="home"
+      type="button"
+    >
+      <span>🏠</span>
+      <small>Home</small>
+    </button>
+
+    <button
+      class="mobile-nav-item"
+      data-page="games"
+      type="button"
+    >
+      <span>🎮</span>
+      <small>Games</small>
+    </button>
+
+    <button
+      class="mobile-nav-item"
+      data-page="chat"
+      type="button"
+    >
+      <span>💬</span>
+      <small>Chat</small>
+    </button>
+
+    <button
+      class="mobile-nav-item"
+      data-page="members"
+      type="button"
+    >
+      <span>👥</span>
+      <small>Members</small>
+    </button>
+
+    <button
+      class="mobile-nav-item"
+      data-page="profile"
+      type="button"
+    >
+      <span>👤</span>
+      <small>Profile</small>
+    </button>
+
+  </nav>
+
+
+  <!-- =========================
+       GLOBAL MODAL
+  ========================== -->
+  <div
+    id="globalModal"
+    class="modal"
+    hidden
+  >
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-box">
+
+      <button
+        id="closeModalButton"
+        class="modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div id="modalContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       TOAST NOTIFICATIONS
+  ========================== -->
+  <div
+    id="toastContainer"
+    class="toast-container"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- =========================
+       LOGIN / REGISTER AREA
+  ========================== -->
+  <div
+    id="authScreen"
+    class="auth-screen"
+    hidden
+  >
+
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        GG
+      </div>
+
+      <h1>GG MODS</h1>
+
+      <p class="auth-subtitle">
+        Gaming. Mods. Community.
+      </p>
+
+
+      <!-- Login -->
+      <form
+        id="loginForm"
+        class="auth-form"
+      >
+
+        <h2>Welcome Back</h2>
+
+        <label for="loginUsername">
+          Username
+        </label>
+
+        <input
+          id="loginUsername"
+          name="username"
+          type="text"
+          placeholder="Enter username"
+          autocomplete="username"
+          required
+        >
+
+        <label for="loginPassword">
+          Password
+        </label>
+
+        <input
+          id="loginPassword"
+          name="password"
+          type="password"
+          placeholder="Enter password"
+          autocomplete="current-password"
+          required
+        >
+
+        <button
+          type="submit"
+          class="primary-button"
+        >
+          Login
+        </button>
+
+        <p class="auth-switch">
+          Don't have an account?
+          <button
+            id="showRegisterButton"
+            type="button"
+            class="text-button"
+          >
+            Register
+          </button>
+        </p>
+
+      </form>
+
+
+      <!-- Register -->
+      <form
+        id="registerForm"
+        class="auth-form"
+        hidden
+      >
+
+        <h2>Create Account</h2>
+
+        <label for="registerUsername">
+          Username
+        </label>
+
+        <input
+          id="registerUsername"
+          name="username"
+          type="text"
+          placeholder="Choose a username"
+          autocomplete="username"
+          required
+        >
+
+        <label for="registerEmail">
+          Email
+        </label>
+
+        <input
+          id="registerEmail"
+          name="email"
+          type="email"
+          placeholder="Enter email"
+          autocomplete="email"
+          required
+        >
+
+        <label for="registerPassword">
+          Password
+        </label>
+
+        <input
+          id="registerPassword"
+          name="password"
+          type="password"
+          placeholder="Create password"
+          autocomplete="new-password"
+          required
+        >
+
+        <button
+          type="submit"
+          class="primary-button"
+        >
+          Create Account
+        </button>
+
+        <p class="auth-switch">
+          Already have an account?
+          <button
+            id="showLoginButton"
+            type="button"
+            class="text-button"
+          >
+            Login
+          </button>
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+</html>
