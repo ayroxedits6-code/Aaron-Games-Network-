@@ -1,0 +1,1470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071018">
+  <title>GG MODS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-logo">GG</span><span>GG MODS</span></div>
+
+      <nav class="side-nav">
+        <button class="nav-link active" data-page="home">⌂ <span>Home</span></button>
+        <button class="nav-link" data-page="games">🎮 <span>Games</span></button>
+        <button class="nav-link" data-page="movies">🎬 <span>Movies</span></button>
+        <button class="nav-link" data-page="chat">💬 <span>Chat</span></button>
+        <button class="nav-link" data-page="members">👥 <span>Members</span></button>
+        <button class="nav-link" data-page="coins">🪙 <span>Coins</span></button>
+        <button class="nav-link" data-page="upcoming">📅 <span>Upcoming Games</span></button>
+        <button class="nav-link" data-page="profile">👤 <span>Profile</span></button>
+        <button class="nav-link" data-page="settings">⚙️ <span>Settings</span></button>
+        <button class="nav-link admin-only" data-page="admin">🛡️ <span>Admin Panel</span></button>
+      </nav>
+
+      <div class="side-user">
+        <div class="avatar" id="sideAvatar">GG</div>
+        <div>
+          <strong id="sideName">Guest</strong>
+          <small id="sideStatus">Not signed in</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" placeholder="Search GG MODS...">
+        </div>
+
+        <button class="icon-btn" id="notificationBtn">🔔</button>
+
+        <button class="profile-button" data-page="profile">
+          <span class="avatar small" id="topAvatar">GG</span>
+          <span id="topName">Guest</span>
+        </button>
+      </header>
+
+      <div class="pages">
+
+        <!-- HOME -->
+        <section class="page active" id="page-home">
+          <div class="hero">
+            <div>
+              <span class="eyebrow">WELCOME TO</span>
+              <h1>GG MODS</h1>
+              <p>
+                A gaming community platform for games, movies,
+                updates, members and real-time communication.
+              </p>
+
+              <div class="actions">
+                <button class="primary" data-page="games">Explore Games</button>
+                <button class="secondary" data-page="chat">Open Chat</button>
+              </div>
+            </div>
+
+            <div class="hero-logo">
+              GG
+              <small>MODS</small>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">DISCOVER</span>
+              <h2>Popular Games</h2>
+            </div>
+            <button class="link-btn" data-page="games">View all →</button>
+          </div>
+
+          <div class="carousel-wrap">
+            <button class="carousel-control" id="prevPopular">‹</button>
+
+            <div id="popularGrid" class="game-grid">
+              <div class="empty">No games have been added yet.</div>
+            </div>
+
+            <button class="carousel-control" id="nextPopular">›</button>
+          </div>
+
+          <div class="dots" id="popularDots"></div>
+
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">COMMUNITY</span>
+              <h2>Latest Posts</h2>
+            </div>
+          </div>
+
+          <div id="posts" class="post-list">
+            <div class="empty">No posts have been added yet.</div>
+          </div>
+        </section>
+
+        <!-- GAMES -->
+        <section class="page" id="page-games">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">LIBRARY</span>
+              <h1>Games</h1>
+            </div>
+
+            <button class="primary admin-only" id="addGameBtn">
+              + Add Game
+            </button>
+          </div>
+
+          <div class="filters">
+            <input class="field" id="gameSearch" placeholder="Search games...">
+
+            <select class="field" id="gameCategory">
+              <option value="">All categories</option>
+              <option>Football</option>
+              <option>Action</option>
+              <option>Racing</option>
+              <option>Adventure</option>
+            </select>
+          </div>
+
+          <div id="gamesGrid" class="game-grid">
+            <div class="empty">No games have been added yet.</div>
+          </div>
+        </section>
+
+        <!-- MOVIES -->
+        <section class="page" id="page-movies">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">WATCH</span>
+              <h1>Movies</h1>
+            </div>
+
+            <button class="primary admin-only" id="addMovieBtn">
+              + Add Movie
+            </button>
+          </div>
+
+          <div class="live-card">
+            <span class="live-dot"></
+:root{
+  --bg:#071018;
+  --panel:#0d1924;
+  --panel2:#122230;
+  --text:#f4f9fc;
+  --muted:#8ca1af;
+  --accent:#12cfff;
+  --accent2:#087ca4;
+  --gold:#ffc83d;
+  --danger:#ff4968;
+  --border:#1d3443;
+  --radius:18px;
+  --shadow:0 18px 50px rgba(0,0,0,.25)
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  min-height:100%;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg);
+  color:var(--text)
+}
+
+body{overflow-x:hidden}
+
+button,input,textarea,select{font:inherit}
+
+button{cursor:pointer}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px
+}
+
+.sidebar{
+  position:fixed;
+  inset:0 auto 0 0;
+  width:242px;
+  background:rgba(7,16,24,.97);
+  border-right:1px solid var(--border);
+  padding:22px 14px;
+  z-index:50
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+  font-size:19px;
+  margin:3px 8px 28px
+}
+
+.brand-logo{
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:var(--accent);
+  color:#00131b
+}
+
+.side-nav{
+  display:grid;
+  gap:6px
+}
+
+.nav-link{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  width:100%;
+  padding:12px;
+  border:0;
+  border-radius:13px;
+  background:transparent;
+  color:var(--muted);
+  text-align:left
+}
+
+.nav-link:hover,
+.nav-link.active{
+  background:var(--panel2);
+  color:var(--text);
+  box-shadow:inset 2px 0 var(--accent)
+}
+
+.side-user{
+  position:absolute;
+  left:15px;
+  right:15px;
+  bottom:17px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px
+}
+
+.side-user small{
+  display:block;
+  color:var(--muted);
+  font-size:11px
+}
+
+.side-user strong{font-size:13px}
+
+.avatar{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#00131b;
+  font-weight:950
+}
+
+.avatar.small{
+  width:32px;
+  height:32px;
+  border-radius:10px;
+  font-size:10px
+}
+
+.avatar.xl{
+  width:86px;
+  height:86px;
+  border-radius:26px;
+  font-size:25px
+}
+
+.main{
+  margin-left:242px;
+  min-height:100vh;
+  padding:88px 28px 95px;
+  max-width:1500px
+}
+
+.topbar{
+  position:fixed;
+  left:242px;
+  right:0;
+  top:0;
+  height:68px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 28px;
+  background:rgba(7,16,24,.82);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  z-index:40
+}
+
+.menu-btn{
+  display:none;
+  background:transparent;
+  color:var(--text);
+  font-size:22px
+}
+
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:1;
+  max-width:600px;
+  padding:0 13px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:13px
+}
+
+.search-box input{
+  width:100%;
+  padding:11px 0;
+  background:transparent;
+  color:var(--text);
+  border:0;
+  outline:0
+}
+
+.icon-btn{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--panel);
+  padding:10px;
+  color:var(--text)
+}
+
+.profile-button{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:transparent;
+  color:var(--text);
+  border:0
+}
+
+.page{
+  display:none;
+  animation:pageIn .18s ease
+}
+
+.page.active{display:block}
+
+@keyframes pageIn{
+  from{opacity:.4;transform:translateY(5px)}
+  to{opacity:1;transform:none}
+}
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:42px;
+  background:
+    radial-gradient(circle at 80% 30%,rgba(18,207,255,.22),transparent 35%),
+    linear-gradient(135deg,#0b1c28,#081018);
+  border:1px solid var(--border);
+  border-radius:28px;
+  box-shadow:var(--shadow)
+}
+
+.hero h1{
+  margin:5px 0;
+  font-size:clamp(46px,7vw,78px);
+  letter-spacing:-4px
+}
+
+.hero p{
+  max-width:650px;
+  color:var(--muted);
+  line-height:1.6
+}
+
+.hero-logo{
+  width:150px;
+  height:150px;
+  display:grid;
+  place-items:center;
+  align-content:center;
+  border-radius:40px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#00131b;
+  font-size:42px;
+  font-weight:1000;
+  transform:rotate(5deg);
+  box-shadow:0 0 55px rgba(18,207,255,.18)
+}
+
+.hero-logo small{
+  font-size:14px;
+  display:block
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--accent);
+  font-weight:900
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:22px
+}
+
+.primary,.secondary,.link-btn{
+  border-radius:12px;
+  padding:11px 16px;
+  font-weight:800
+}
+
+.primary{
+  border:0;
+  background:var(--accent);
+  color:#00131b
+}
+
+.secondary{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid var(--border)
+}
+
+.link-btn{
+  background:transparent;
+  color:var(--accent);
+  border:0
+}
+
+.section-title,
+.page-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin:30px 0 15px
+}
+
+.section-title h2,
+.page-title h1{
+  margin:4px 0
+}
+
+.carousel-wrap{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:8px
+}
+
+.carousel-control{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--text);
+  font-size:27px
+}
+
+.game-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px
+}
+
+.game-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden
+}
+
+.cover{
+  height:165px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--accent2),#152636);
+  font-size:28px;
+  font-weight:950
+}
+
+.game-body{padding:13px}
+
+.game-body h3{
+  margin:0 0 5px;
+  font-size:15px
+}
+
+.game-body p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px
+}
+
+.empty{
+  min-height:130px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:var(--muted);
+  background:var(--panel);
+  border:1px dashed var(--border);
+  border-radius:18px;
+  padding:20px
+}
+
+.game-grid>.empty{grid-column:1/-1}
+
+.dots{
+  display:flex;
+  justify-content:center;
+  gap:5px;
+  margin-top:9px
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--border)
+}
+
+.dot.active{background:var(--accent)}
+
+.post-list,
+.transactions{
+  display:grid;
+  gap:10px
+}
+
+.post,
+.tx{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:15px
+}
+
+.tx{
+  display:flex;
+  justify-content:space-between
+}
+
+.filters{
+  display:flex;
+  gap:10px;
+  margin-bottom:18px
+}
+
+.field{
+  width:100%;
+  padding:11px;
+  border-radius:12px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--text);
+  outline:0
+}
+
+.filters .field{max-width:480px}
+
+.live-card{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:17px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px;
+  margin-bottom:18px
+}
+
+.live-card>div{flex:1}
+
+.live-card small{
+  display:block;
+  color:var(--muted);
+  margin-top:3px
+}
+
+.live-dot{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:#ff375f;
+  box-shadow:0 0 13px #ff375f
+}
+
+.chat-tabs{display:none}
+
+.chat-layout{
+  height:calc(100vh - 190px);
+  min-height:480px;
+  display:grid;
+  grid-template-columns:250px 1fr;
+  gap:12px
+}
+
+.chat-list,
+.chat-window{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden
+}
+
+.chat-window{
+  display:grid;
+  grid-template-rows:auto 1fr auto
+}
+
+.chat-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:13px;
+  border-bottom:1px solid var(--border)
+}
+
+.chat-header>div:nth-child(2){flex:1}
+
+.chat-header small{
+  display:block;
+  color:var(--muted);
+  font-size:11px
+}
+
+.messages{
+  padding:16px;
+  overflow:auto
+}
+
+.bubble{
+  width:max-content;
+  max-width:75%;
+  margin:7px 0;
+  padding:10px 12px;
+  background:var(--panel2);
+  border:1px solid var(--border);
+  border-radius:14px
+}
+
+.bubble.mine{
+  margin-left:auto;
+  border-color:rgba(18,207,255,.45)
+}
+
+.bubble small{
+  display:block;
+  color:var(--muted);
+  font-size:9px;
+  margin-top:4px
+}
+
+.composer{
+  display:flex;
+  gap:8px;
+  padding:12px;
+  border-top:1px solid var(--border)
+}
+
+.composer input{
+  flex:1;
+  min-width:0;
+  padding:11px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--panel2);
+  color:var(--text);
+  outline:0
+}
+
+.member-count{
+  display:inline-block;
+  padding:9px 12px;
+  border:1px solid var(--border);
+  background:var(--panel);
+  border-radius:12px;
+  color:var(--muted);
+  margin-bottom:15px
+}
+
+.member-count strong{color:var(--text)}
+
+.members-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px
+}
+
+.member{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:17px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px
+}
+
+.member small{
+  display:block;
+  color:var(--muted)
+}
+
+.coin-card{
+  display:flex;
+  align-items:center;
+  gap:17px;
+  max-width:520px;
+  padding:20px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:20px
+}
+
+.coin-icon{font-size:50px}
+
+.coin-card small{color:var(--muted)}
+
+.coin-card strong{
+  display:block;
+  font-size:38px
+}
+
+.coin-card span{color:var(--gold)}
+
+.profile-banner{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:25px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:20px
+}
+
+.profile-banner h1{margin:4px 0}
+
+.profile-banner p{color:var(--muted)}
+
+.settings-card{
+  display:grid;
+  gap:14px;
+  max-width:850px;
+  margin-top:14px;
+  padding:20px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px
+}
+
+.settings-card label{
+  display:grid;
+  gap:7px;
+  color:var(--muted)
+}
+
+.settings-card h2{margin:0}
+
+.settings-card hr{
+  width:100%;
+  border:0;
+  border-top:1px solid var(--border)
+}
+
+.theme-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px
+}
+
+.theme{
+  height:75px;
+  border-radius:15px;
+  font-weight:950;
+  border:2px solid transparent
+}
+
+.theme.red{background:#6d1c30}
+.theme.blue{background:#164a83}
+.theme.green{background:#176343}
+.theme.white{background:#edf1f4;color:#101820}
+.theme.neon{background:#030303;color:#23ffe4;border-color:#23ffe4}
+
+.switch-row{
+  display:flex!important;
+  grid-template-columns:none!important;
+  justify-content:space-between;
+  align-items:center
+}
+
+.admin-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px
+}
+
+.stat{
+  padding:18px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:17px
+}
+
+.stat span{
+  display:block;
+  color:var(--muted);
+  font-size:12px
+}
+
+.stat strong{
+  display:block;
+  font-size:30px;
+  margin-top:5px
+}
+
+.bottom-nav{display:none}
+
+.toast{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:100;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(8px);
+  transition:.2s;
+  background:var(--panel2);
+  border:1px solid var(--accent);
+  padding:12px 15px;
+  border-radius:12px
+}
+
+.toast.show{
+  opacity:1;
+  transform:none
+}
+
+.admin-only{display:none}
+
+[data-theme="red"]{
+  --bg:#16080c;
+  --panel:#251019;
+  --panel2:#351420;
+  --accent:#ff4968;
+  --accent2:#a71f40;
+  --border:#4d2031
+}
+
+[data-theme="blue"]{
+  --bg:#06101c;
+  --panel:#0b192b;
+  --panel2:#102641;
+  --accent:#39a7ff;
+  --accent2:#1766a8;
+  --border:#203d58
+}
+
+[data-theme="green"]{
+  --bg:#06150f;
+  --panel:#0b2117;
+  --panel2:#103322;
+  --accent:#36e59a;
+  --accent2:#16875d;
+  --border:#1c4b36
+}
+
+[data-theme="white"]{
+  --bg:#edf2f5;
+  --panel:#fff;
+  --panel2:#e5ebef;
+  --text:#101820;
+  --muted:#586975;
+  --accent:#087da8;
+  --accent2:#4db2cf;
+  --border:#ccd7de
+}
+
+[data-theme="neon"]{
+  --bg:#030405;
+  --panel:#090b0d;
+  --panel2:#0d1114;
+  --accent:#22ffe4;
+  --accent2:#8d35ff;
+  --border:#183b3b
+}
+
+@media(max-width:1050px){
+  .game-grid{grid-template-columns:repeat(3,1fr)}
+  .members-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:760px){
+  .sidebar{
+    transform:translateX(-100%);
+    transition:.2s
+  }
+
+  .sidebar.open{transform:none}
+
+  .main{
+    margin-left:0;
+    padding:80px 14px 88px
+  }
+
+  .topbar{
+    left:0;
+    padding:10px 14px
+  }
+
+  .menu-btn{display:block}
+
+  .hero{padding:28px}
+
+  .hero-logo{display:none}
+
+  .hero h1{font-size:49px}
+
+  .game-grid{grid-template-columns:repeat(2,1fr)}
+
+  .members-grid{grid-template-columns:1fr}
+
+  .theme-grid{grid-template-columns:repeat(2,1fr)}
+
+  .stats{grid-template-columns:repeat(2,1fr)}
+
+  .bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:68px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    z-index:45;
+    background:rgba(7,16,24,.95);
+    backdrop-filter:blur(15px);
+    border-top:1px solid var(--border)
+  }
+
+  .bottom-nav button{
+    display:grid;
+    place-items:center;
+    background:transparent;
+    color:var(--muted);
+    font-size:18px
+  }
+
+  .bottom-nav button.active{color:var(--accent)}
+
+  .bottom-nav small{font-size:9px}
+
+  .profile-button>span:last-child{display:none}
+
+  .chat-tabs{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+    margin-bottom:9px
+  }
+
+  .chat-tabs button{
+    padding:10px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    color:var(--muted)
+  }
+
+  .chat-tabs button.active{
+    color:var(--accent);
+    border-color:var(--accent)
+  }
+
+  .chat-layout{
+    height:calc(100vh - 245px);
+    min-height:410px;
+    grid-template-columns:1fr
+  }
+
+  .chat-list{display:none}
+
+  .filters{display:grid}
+
+  .filters .field{max-width:none}
+
+  .carousel-wrap{grid-template-columns:1fr}
+
+  .carousel-control{display:none}
+}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071018">
+  <title>GG MODS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-logo">GG</span><span>GG MODS</span></div>
+
+      <nav class="side-nav">
+        <button class="nav-link active" data-page="home">⌂ <span>Home</span></button>
+        <button class="nav-link" data-page="games">🎮 <span>Games</span></button>
+        <button class="nav-link" data-page="movies">🎬 <span>Movies</span></button>
+        <button class="nav-link" data-page="chat">💬 <span>Chat</span></button>
+        <button class="nav-link" data-page="members">👥 <span>Members</span></button>
+        <button class="nav-link" data-page="coins">🪙 <span>Coins</span></button>
+        <button class="nav-link" data-page="upcoming">📅 <span>Upcoming Games</span></button>
+        <button class="nav-link" data-page="profile">👤 <span>Profile</span></button>
+        <button class="nav-link" data-page="settings">⚙️ <span>Settings</span></button>
+        <button class="nav-link admin-only" data-page="admin">🛡️ <span>Admin Panel</span></button>
+      </nav>
+
+      <div class="side-user">
+        <div class="avatar" id="sideAvatar">GG</div>
+        <div>
+          <strong id="sideName">Guest</strong>
+          <small id="sideStatus">Not signed in</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" placeholder="Search GG MODS...">
+        </div>
+
+        <button class="icon-btn" id="notificationBtn">🔔</button>
+
+        <button class="profile-button" data-page="profile">
+          <span class="avatar small" id="topAvatar">GG</span>
+          <span id="topName">Guest</span>
+        </button>
+      </header>
+
+      <div class="pages">
+
+        <!-- HOME -->
+        <section class="page active" id="page-home">
+          <div class="hero">
+            <div>
+              <span class="eyebrow">WELCOME TO</span>
+              <h1>GG MODS</h1>
+              <p>
+                A gaming community platform for games, movies,
+                updates, members and real-time communication.
+              </p>
+
+              <div class="actions">
+                <button class="primary" data-page="games">Explore Games</button>
+                <button class="secondary" data-page="chat">Open Chat</button>
+              </div>
+            </div>
+
+            <div class="hero-logo">
+              GG
+              <small>MODS</small>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">DISCOVER</span>
+              <h2>Popular Games</h2>
+            </div>
+            <button class="link-btn" data-page="games">View all →</button>
+          </div>
+
+          <div class="carousel-wrap">
+            <button class="carousel-control" id="prevPopular">‹</button>
+
+            <div id="popularGrid" class="game-grid">
+              <div class="empty">No games have been added yet.</div>
+            </div>
+
+            <button class="carousel-control" id="nextPopular">›</button>
+          </div>
+
+          <div class="dots" id="popularDots"></div>
+
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">COMMUNITY</span>
+              <h2>Latest Posts</h2>
+            </div>
+          </div>
+
+          <div id="posts" class="post-list">
+            <div class="empty">No posts have been added yet.</div>
+          </div>
+        </section>
+
+        <!-- GAMES -->
+        <section class="page" id="page-games">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">LIBRARY</span>
+              <h1>Games</h1>
+            </div>
+
+            <button class="primary admin-only" id="addGameBtn">
+              + Add Game
+            </button>
+          </div>
+
+          <div class="filters">
+            <input class="field" id="gameSearch" placeholder="Search games...">
+
+            <select class="field" id="gameCategory">
+              <option value="">All categories</option>
+              <option>Football</option>
+              <option>Action</option>
+              <option>Racing</option>
+              <option>Adventure</option>
+            </select>
+          </div>
+
+          <div id="gamesGrid" class="game-grid">
+            <div class="empty">No games have been added yet.</div>
+          </div>
+        </section>
+
+        <!-- MOVIES -->
+        <section class="page" id="page-movies">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">WATCH</span>
+              <h1>Movies</h1>
+            </div>
+
+            <button class="primary admin-only" id="addMovieBtn">
+              + Add Movie
+            </button>
+          </div>
+
+          <div class="live-card">
+            <span class="live-dot"></span>
+
+            <div>
+              <strong>Live Movies</strong>
+              <small>Authorized live streams can appear here.</small>
+            </div>
+
+            <button class="secondary" id="liveBtn">Open Live</button>
+          </div>
+
+          <div id="moviesGrid" class="game-grid">
+            <div class="empty">No movies have been added yet.</div>
+          </div>
+        </section>
+
+        <!-- CHAT -->
+        <section class="page" id="page-chat">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">COMMUNITY</span>
+              <h1>Chat</h1>
+            </div>
+          </div>
+
+          <div class="chat-tabs">
+            <button class="active" data-chat-tab="members">Members</button>
+            <button data-chat-tab="dm">DMs</button>
+            <button data-chat-tab="group">Group Chat</button>
+          </div>
+
+          <div class="chat-layout">
+            <aside class="chat-list" id="chatList">
+              <div class="empty">
+                Sign in to see members and conversations.
+              </div>
+            </aside>
+
+            <div class="chat-window">
+              <div class="chat-header">
+                <div class="avatar">GG</div>
+
+                <div>
+                  <strong id="chatTitle">GG MODS Group Chat</strong>
+                  <small id="chatSubtitle">Community room</small>
+                </div>
+
+                <button class="icon-btn" id="voiceCallBtn">📞</button>
+              </div>
+
+              <div class="messages" id="messages">
+                <div class="empty">No messages yet.</div>
+              </div>
+
+              <form class="composer" id="messageForm">
+                <button type="button" class="icon-btn" id="emojiBtn">😊</button>
+
+                <input
+                  id="messageInput"
+                  autocomplete="off"
+                  placeholder="Write a message..."
+                >
+
+                <button class="primary" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- MEMBERS -->
+        <section class="page" id="page-members">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">COMMUNITY</span>
+              <h1>Members</h1>
+            </div>
+          </div>
+
+          <div class="member-count">
+            Registered members:
+            <strong id="memberCount">0</strong>
+          </div>
+
+          <div id="membersGrid" class="members-grid">
+            <div class="empty">No members to display yet.</div>
+          </div>
+        </section>
+
+        <!-- COINS -->
+        <section class="page" id="page-coins">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">REWARDS</span>
+              <h1>Coins</h1>
+            </div>
+          </div>
+
+          <div class="coin-card">
+            <div class="coin-icon">🪙</div>
+
+            <div>
+              <small>Your balance</small>
+              <strong id="coinBalance">0</strong>
+              <span>GG Coins</span>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <h2>Transaction History</h2>
+          </div>
+
+          <div id="transactions" class="transactions">
+            <div class="empty">No transactions yet.</div>
+          </div>
+        </section>
+
+        <!-- UPCOMING -->
+        <section class="page" id="page-upcoming">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">REQUESTS</span>
+              <h1>Upcoming Games</h1>
+            </div>
+
+            <button class="primary admin-only" id="addUpcomingBtn">
+              + Add Upcoming Game
+            </button>
+          </div>
+
+          <div id="upcomingGrid" class="game-grid">
+            <div class="empty">
+              No upcoming games have been added yet.
+            </div>
+          </div>
+        </section>
+
+        <!-- PROFILE -->
+        <section class="page" id="page-profile">
+          <div class="profile-banner">
+            <div class="avatar xl" id="profileAvatar">GG</div>
+
+            <div>
+              <span class="eyebrow">PROFILE</span>
+              <h1 id="profileName">Guest</h1>
+              <p id="profileBio">
+                Sign in to create your GG MODS profile.
+              </p>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h2>Edit Profile</h2>
+
+            <label>
+              Display name
+              <input
+                class="field"
+                id="displayName"
+                maxlength="40"
+                placeholder="Your name"
+              >
+            </label>
+
+            <label>
+              Bio
+              <textarea
+                class="field"
+                id="bio"
+                maxlength="160"
+                placeholder="Tell the community about you"
+              ></textarea>
+            </label>
+
+            <button class="primary" id="saveProfile">
+              Save Profile
+            </button>
+
+            <button class="secondary" id="signInBtn">
+              Sign in / Create local account
+            </button>
+          </div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="page" id="page-settings">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">PREFERENCES</span>
+              <h1>Settings</h1>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h2>Appearance</h2>
+
+            <p class="muted">
+              Choose a complete GG MODS theme.
+            </p>
+
+            <div class="theme-grid">
+              <button class="theme red" data-theme="red">RED</button>
+              <button class="theme blue" data-theme="blue">BLUE</button>
+              <button class="theme green" data-theme="green">GREEN</button>
+              <button class="theme white" data-theme="white">WHITE</button>
+              <button class="theme neon" data-theme="neon">BLACK NEON</button>
+            </div>
+
+            <hr>
+
+            <h2>Notifications</h2>
+
+            <label class="switch-row">
+              <span>Enable notifications</span>
+              <input type="checkbox" id="notificationsToggle" checked>
+            </label>
+
+            <hr>
+
+            <h2>Account</h2>
+
+            <button class="secondary" id="logoutBtn">
+              Log out
+            </button>
+          </div>
+        </section>
+
+        <!-- ADMIN -->
+        <section class="page admin-only" id="page-admin">
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">PRIVATE</span>
+              <h1>Admin Panel</h1>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <span>Registered Members</span>
+              <strong id="statMembers">0</strong>
+            </div>
+
+            <div class="stat">
+              <span>Games</span>
+              <strong id="statGames">0</strong>
+            </div>
+
+            <div class="stat">
+              <span>Movies</span>
+              <strong id="statMovies">0</strong>
+            </div>
+
+            <div class="stat">
+              <span>Transactions</span>
+              <strong id="statTransactions">0</strong>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h2>Content management</h2>
+
+            <p class="muted">
+              This starter UI is ready to connect to a real backend.
+              Admin permissions must be enforced by backend/database
+              rules, not by this frontend alone.
+            </p>
+
+            <div class="admin-actions">
+              <button class="secondary" id="adminGameAction">Add Game</button>
+              <button class="secondary" id="adminMovieAction">Add Movie</button>
+              <button class="secondary" id="adminCoinAction">Give Coins</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="active" data-page="home">⌂<small>Home</small></button>
+      <button data-page="games">🎮<small>Games</small></button>
+      <button data-page="movies">🎬<small>Movies</small></button>
+      <button data-page="chat">💬<small>Chat</small></button>
+      <button data-page="profile">👤<small>Profile</small></button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
